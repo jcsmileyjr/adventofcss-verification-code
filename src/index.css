@@ -10,7 +10,8 @@ body {
 
 @media only screen and (min-width: 600px){
   body {
-    background-color: #c2d3dd;    
+    /*#c2d3dd #dfdffb;*/
+    background-color: #dfdffb;   
   }
 }
 
