@@ -35,7 +35,8 @@ h1, p {
   font-weight: bold;
   color: #5353f1;
   border-radius: 10px;
-  border: 1px solid rgb(221 221 221);;
+  border: 1px solid rgb(221 221 221);
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .verficiation__button--container {
@@ -48,4 +49,15 @@ h1, p {
     width: 90%;
     margin-top: 40px;
     border-radius: 10px;
+    /*background-color: #ae7bf3;*/
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(185,117,231,1) 50%, rgba(131,58,180,1) 100%);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 1px solid #ae7bf3;
+}
+
+.custom-family-font {
+  font-family: 'Noto Sans JP', sans-serif;
 }

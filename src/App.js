@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <h1>VERFICATION CODE</h1>
+        <h1 className='custom-family-font'>VERFICATION CODE</h1>
         <p>Please enter the code that we sent to (***) *** - 2819</p>
         <div className='input--container'>
           <input type="text"  className='inputField--style' value="1" />
@@ -14,7 +14,7 @@ function App() {
           <input type="text"  className='inputField--style' />
         </div>
         <div className='verficiation__button--container'>
-          <button type="button" className='verfication__button--style'>VERFICATION CODE</button>
+          <button type="button" className='verfication__button--style custom-family-font'>VERFICATION CODE</button>
         </div>
       </main>
     </div>
