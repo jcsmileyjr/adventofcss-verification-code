@@ -1,7 +1,15 @@
 
 import './App.css';
+import Swal from 'sweetalert2';
 
 function App() {
+  const showVerficationCode = () => {
+    Swal.fire({
+      title: 'Verfication Code',
+      text: 'Your code is: 12345'
+    })
+  }
+  
   return (
     <div className="App">
       <main>
@@ -14,7 +22,7 @@ function App() {
           <input type="text"  className='inputField--style' />
         </div>
         <div className='verficiation__button--container'>
-          <button type="button" className='verfication__button--style custom-family-font'>VERFICATION CODE</button>
+          <button type="button" className='verfication__button--style custom-family-font' onClick={() => showVerficationCode() }>VERFICATION CODE</button>
         </div>
       </main>
     </div>
