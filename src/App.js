@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 
 function App() {
   const [isSolved, setSolved] = useState(false);
+  const [disableInputs, setDisableInputs] = useState(true);
   const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
@@ -30,6 +31,7 @@ function App() {
       title: 'Verfication Code',
       text: 'Your code is: 1234'
     })
+    setDisableInputs(false);
   }
 
   /**
@@ -44,7 +46,6 @@ function App() {
           return;
       }
     }
-    
   }
   
   return (
@@ -55,11 +56,14 @@ function App() {
             <h1 className='custom-family-font'>VERFICATION CODE</h1>
             <p>Please enter the code that we sent to (***) *** - 2819</p>
             <div className='input--container'>
-              <input type="text" ref={code1} className='inputField--style' value={input1} onChange={(e) => {setInput1(Number(e.target.value)); nextField()}} />
-              <input type="text" ref={code2} className='inputField--style' value={input2} onChange={(e) => {setInput2(Number(e.target.value)); nextField()}} />
-              <input type="text" ref={code3} className='inputField--style' value={input3} onChange={(e) => {setInput3(Number(e.target.value)); nextField()}} />
-              <input type="text" ref={code4} className='inputField--style' value={input4} onChange={(e) => {setInput4(Number(e.target.value)); nextField()}} />
+              <input type="text" disabled={disableInputs} ref={code1} className='inputField--style' value={input1} onChange={(e) => {setInput1(Number(e.target.value)); nextField()}} />
+              <input type="text" disabled={disableInputs} ref={code2} className='inputField--style' value={input2} onChange={(e) => {setInput2(Number(e.target.value)); nextField()}} />
+              <input type="text" disabled={disableInputs} ref={code3} className='inputField--style' value={input3} onChange={(e) => {setInput3(Number(e.target.value)); nextField()}} />
+              <input type="text" disabled={disableInputs} ref={code4} className='inputField--style' value={input4} onChange={(e) => {setInput4(Number(e.target.value)); nextField()}} />
             </div>
+            {disableInputs &&
+              <p className='disableMessage'>Inputs are disabled until "Verfication Code" is sent</p>
+            }
             <div className='verficiation__button--container'>
               <button type="button" className='verfication__button--style custom-family-font' onClick={() => showVerficationCode() }>VERFICATION CODE</button>
             </div>          

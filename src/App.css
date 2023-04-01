@@ -77,3 +77,7 @@ h1, p {
 .custom-family-font {
   font-family: 'Noto Sans JP', sans-serif;
 }
+
+.disableMessage {
+  color: red;
+}
