@@ -60,6 +60,7 @@ function App() {
               <input
                 type="text"
                 disabled={disableInputs}
+                data-testid = "input1"
                 ref={code1}
                 className="inputField--style"
                 value={input1}
@@ -71,6 +72,7 @@ function App() {
               <input
                 type="text"
                 disabled={disableInputs}
+                data-testid = "input2"
                 ref={code2}
                 className="inputField--style"
                 value={input2}
@@ -82,6 +84,7 @@ function App() {
               <input
                 type="text"
                 disabled={disableInputs}
+                data-testid = "input3"
                 ref={code3}
                 className="inputField--style"
                 value={input3}
@@ -93,6 +96,7 @@ function App() {
               <input
                 type="text"
                 disabled={disableInputs}
+                data-testid = "input4"
                 ref={code4}
                 className="inputField--style"
                 value={input4}
