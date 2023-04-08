@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
 describe("Main screen UI elements are there", () => {
@@ -33,3 +33,16 @@ describe("Main screen UI elements are there", () => {
   })
   
 });
+
+describe("that the the verfication code can be asked for", () => {
+  test("that the error code isn't shown before the button is pressed",() => {
+    render(<App />); 
+    expect(screen.queryByText(/Your code is/i)).toBeNull();
+  })
+
+  test("that when the button is pressed the user gets the code",async () => {
+    render(<App />); 
+    fireEvent.click(screen.getByRole("button"));
+    expect(await screen.findByText(/Your code is: 1234/i)).toBeInTheDocument();
+  })
+})
