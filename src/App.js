@@ -114,6 +114,7 @@ function App() {
             <div className="verficiation__button--container">
               <button
                 type="button"
+                data-testid = "verficationButton"
                 className="verfication__button--style custom-family-font"
                 onClick={() => showVerficationCode()}
               >
